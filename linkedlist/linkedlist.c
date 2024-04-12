@@ -1,19 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "linkedlist.h"
-
-typedef struct Node{
-    void* data;
-    struct Node * next;
-    struct Node * prev;
-} Node;
-
-typedef struct LinkedList{
-    Node * head;
-    Node * tail;
-    int size;
-} LinkedList;
 
 LinkedList * ll_create(){
     LinkedList * newList = (LinkedList *)(malloc(sizeof(LinkedList)));

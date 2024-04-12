@@ -1,9 +1,22 @@
 #ifndef linkedlist
 #define linkedlist
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
-typedef struct LinkedList LinkedList;
-typedef struct Node Node;
+
+typedef struct Node{
+    void* data;
+    struct Node * next;
+    struct Node * prev;
+} Node;
+
+typedef struct LinkedList{
+    Node * head;
+    Node * tail;
+    int size;
+} LinkedList;
 
 LinkedList * ll_create();
 Node * node_create(void* data);
